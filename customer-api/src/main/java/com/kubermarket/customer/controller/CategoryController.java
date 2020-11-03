@@ -1,7 +1,7 @@
 package com.kubermarket.customer.controller;
 
+import com.example.common.dto.CategoryDto;
 import com.kubermarket.customer.service.CategoryService;
-import dto.CategoryDto;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

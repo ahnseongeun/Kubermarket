@@ -1,8 +1,8 @@
 package com.kubermarket.customer.service;
 
-import domain.Category;
-import domain.CategoryRepository;
-import dto.CategoryDto;
+import com.example.common.domain.Category;
+import com.example.common.domain.CategoryRepository;
+import com.example.common.dto.CategoryDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;

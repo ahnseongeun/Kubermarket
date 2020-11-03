@@ -1,7 +1,7 @@
 package com.kubermarket.customer.service;
 
-import domain.ChatRoom;
-import domain.ChatRoomRepository;
+import com.example.common.domain.ChatRoom;
+import com.example.common.domain.ChatRoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

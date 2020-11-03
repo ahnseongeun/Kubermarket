@@ -1,6 +1,6 @@
 package com.kubermarket.customer;
 
-import domain.*;
+import com.example.common.domain.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,9 +10,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDateTime;
 
-@SpringBootApplication
 @RequiredArgsConstructor
 @EnableCaching
+@SpringBootApplication(scanBasePackages = "com.example")
 public class KubermarketCustomerApplication implements CommandLineRunner {
 
     public static void main(String[] args) {

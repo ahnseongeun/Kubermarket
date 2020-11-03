@@ -1,7 +1,7 @@
 package com.kubermarket.customer.service;
 
-import domain.*;
-import error.EmailExistedException;
+import com.example.common.domain.*;
+import com.example.common.error.EmailExistedException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;

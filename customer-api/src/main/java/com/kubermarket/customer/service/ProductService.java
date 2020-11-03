@@ -1,9 +1,9 @@
 package com.kubermarket.customer.service;
 
 
-import domain.*;
-import dto.PopularProductDto;
-import dto.ProductDto;
+import com.example.common.domain.*;
+import com.example.common.dto.PopularProductDto;
+import com.example.common.dto.ProductDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheEvict;

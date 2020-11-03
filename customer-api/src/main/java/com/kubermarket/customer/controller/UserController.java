@@ -1,9 +1,9 @@
 package com.kubermarket.customer.controller;
 
+import com.example.common.domain.User;
+import com.example.common.error.EmailExistedException;
+import com.example.common.error.ErrorAccess;
 import com.kubermarket.customer.service.UserService;
-import domain.User;
-import error.EmailExistedException;
-import error.ErrorAccess;
 import io.jsonwebtoken.Claims;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
