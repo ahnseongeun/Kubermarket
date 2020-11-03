@@ -1,4 +1,4 @@
-package com.example.kubermarket.domain;
+package domain;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -3,6 +3,7 @@ package com.example.kubermarket.service;
 import com.example.kubermarket.domain.Category;
 import com.example.kubermarket.domain.ChatRoom;
 import com.example.kubermarket.domain.ChatRoomRepository;
+import domain.ChatRoom;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,4 +1,4 @@
-package com.example.kubermarket.domain;
+package domain;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -10,7 +10,6 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Proxy;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;

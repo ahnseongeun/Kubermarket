@@ -1,4 +1,4 @@
-package com.example.kubermarket.domain;
+package domain;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

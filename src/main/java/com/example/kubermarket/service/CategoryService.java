@@ -4,14 +4,11 @@ import com.example.kubermarket.domain.Category;
 import com.example.kubermarket.domain.CategoryRepository;
 import com.example.kubermarket.domain.Product;
 import com.example.kubermarket.dto.CategoryDto;
-import com.example.kubermarket.dto.ProductDto;
+import domain.Category;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;

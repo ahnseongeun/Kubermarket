@@ -1,8 +1,8 @@
 package com.example.kubermarket.service;
 
 import com.example.kubermarket.domain.*;
+import domain.ProductReview;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

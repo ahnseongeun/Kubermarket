@@ -1,7 +1,5 @@
-package com.example.kubermarket.controller;
+package controller;
 
-
-import com.example.kubermarket.dto.CategoryDto;
 import com.example.kubermarket.service.CategoryService;
 import domain.Category;
 import io.swagger.annotations.ApiOperation;
@@ -18,21 +16,13 @@ import java.util.List;
 @RequestMapping(value = "/api")
 public class CategoryController {
 
+    @Autowired
     private final CategoryService categoryService;
 
     @Autowired
     public CategoryController(CategoryService categoryService) {
         this.categoryService=categoryService;
     }
-
-    @ResponseBody
-    @RequestMapping(value = "/categories", method = RequestMethod.GET)
-    @ApiOperation(value = "Category List(client)", notes = "카테고리 목록 불러오기")
-    public List<CategoryDto> list(){ //DTO 처리 해야한다.
-        List<CategoryDto> categoryDtoList= categoryService.getCategories();
-        return categoryDtoList;
-    }
-
 
     @ResponseBody
     @RequestMapping(value = "/category", method = RequestMethod.POST)
