@@ -1,5 +1,8 @@
-package com.example.customer.filter;
+package com.example.customer;
 
+import com.example.customer.filter.JwtAuthenticationFilter;
+import com.example.customer.filter.JwtUtil;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,7 +19,8 @@ import javax.servlet.Filter;
 @EnableWebSecurity
 public class SecurityJavaConfig extends WebSecurityConfigurerAdapter {
 
-    private String secret = "12345678901234567890123456789012";
+    @Value("${jwt.secret}")
+    private String secret;
 
     protected void configure(HttpSecurity http) throws Exception {
         Filter filter = new JwtAuthenticationFilter(

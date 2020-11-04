@@ -14,13 +14,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>kubermarket</name>
     <description>Demo project for Spring Boot</description>
-
-    <modules>
-        <module>admin-api</module>
-        <module>common-api</module>
-        <module>customer-api</module>
-        <module>login-api</module>
-    </modules>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -126,14 +119,19 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
-
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                -->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+    <modules>
+        <module>common-api</module>
+        <module>admin-api</module>
+        <module>customer-api</module>
+        <module>login-api</module>
+    </modules>
 </project>
