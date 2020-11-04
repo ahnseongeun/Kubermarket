@@ -1,4 +1,4 @@
-package com.kubermarket.customer.filter;
+package com.example.customer.filter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

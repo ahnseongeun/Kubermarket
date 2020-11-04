@@ -1,9 +1,9 @@
-package com.kubermarket.customer.controller;
+package com.example.customer.controller;
 
 
 import com.example.common.domain.ProductReview;
 import com.example.common.error.ErrorAccess;
-import com.kubermarket.customer.service.ProductReviewService;
+import com.example.customer.service.ProductReviewService;
 import io.jsonwebtoken.Claims;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.kubermarket.customer.filter;
+package com.example.customer.filter;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

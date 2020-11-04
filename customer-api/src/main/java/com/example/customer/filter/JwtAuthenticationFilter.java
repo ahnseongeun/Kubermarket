@@ -1,4 +1,4 @@
-package com.kubermarket.customer.filter;
+package com.example.customer.filter;
 
 import com.example.common.error.ErrorAccess;
 import io.jsonwebtoken.Claims;

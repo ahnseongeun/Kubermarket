@@ -1,4 +1,4 @@
-package com.kubermarket.customer.service;
+package com.example.customer.service;
 
 
 import com.example.common.domain.*;

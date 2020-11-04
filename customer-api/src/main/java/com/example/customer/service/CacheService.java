@@ -1,4 +1,4 @@
-package com.kubermarket.customer.service;
+package com.example.customer.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheEvict;

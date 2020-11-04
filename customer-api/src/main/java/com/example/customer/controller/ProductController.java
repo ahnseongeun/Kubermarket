@@ -1,11 +1,11 @@
-package com.kubermarket.customer.controller;
+package com.example.customer.controller;
 
 
 import com.example.common.domain.Product;
 import com.example.common.dto.PopularProductDto;
 import com.example.common.dto.ProductDto;
 import com.example.common.error.ErrorAccess;
-import com.kubermarket.customer.service.ProductService;
+import com.example.customer.service.ProductService;
 import io.jsonwebtoken.Claims;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

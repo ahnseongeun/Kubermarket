@@ -1,4 +1,4 @@
-package com.kubermarket.customer.filter;
+package com.example.customer.filter;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

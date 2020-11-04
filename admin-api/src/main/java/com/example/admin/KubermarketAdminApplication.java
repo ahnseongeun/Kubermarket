@@ -21,17 +21,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @EnableCaching
 @EntityScan("com.example.common.domain")
 @EnableJpaRepositories("com.example.common.domain")
-@EnableWebSecurity
-//@Configuration
-//@ComponentScan(basePackages = "com.example.common")
 public class KubermarketAdminApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(KubermarketAdminApplication.class, args);
     }
 
-      @Autowired
-      private  final ChatMessageRepository chatMessageRepository;
+//      @Autowired
+//      private  final ChatMessageRepository chatMessageRepository;
 //    private final CategoryRepository categoryRepository;
 //    private final ProductRepository productRepository;
 //    private final ProductReviewRepository productReviewRepository;
