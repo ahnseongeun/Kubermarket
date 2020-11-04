@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
 @EnableCaching
-@SpringBootApplication(scanBasePackages = "com.example")
+@SpringBootApplication(scanBasePackages = "com.example.common")
 public class KubermarketCustomerApplication implements CommandLineRunner {
 
     public static void main(String[] args) {

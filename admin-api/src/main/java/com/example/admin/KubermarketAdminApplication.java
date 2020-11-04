@@ -4,25 +4,34 @@ package com.example.admin;
 import com.example.common.domain.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.mongo.MongoReactiveDataAutoConfiguration;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
-import java.time.LocalDateTime;
-
-@SpringBootApplication(scanBasePackages = "com.example.common")
+@SpringBootApplication(scanBasePackages = "com.example")
 @RequiredArgsConstructor
 @EnableCaching
+@EntityScan("com.example.common.domain")
+@EnableJpaRepositories("com.example.common.domain")
+@EnableWebSecurity
+//@Configuration
+//@ComponentScan(basePackages = "com.example.common")
 public class KubermarketAdminApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(KubermarketAdminApplication.class, args);
     }
 
-
-//    private final ChatMessageRepository chatMessageRepository;
+      @Autowired
+      private  final ChatMessageRepository chatMessageRepository;
 //    private final CategoryRepository categoryRepository;
 //    private final ProductRepository productRepository;
 //    private final ProductReviewRepository productReviewRepository;

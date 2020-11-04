@@ -1,5 +1,8 @@
-package com.example.admin.filter;
+package com.example.admin;
 
+import com.example.admin.filter.JwtAuthenticationFilter;
+import com.example.admin.filter.JwtUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -14,6 +17,7 @@ import javax.servlet.Filter;
 
 @Configuration
 @EnableWebSecurity
+@Slf4j
 public class SecurityJavaConfig extends WebSecurityConfigurerAdapter {
 
     private String secret = "12345678901234567890123456789012";
@@ -22,6 +26,7 @@ public class SecurityJavaConfig extends WebSecurityConfigurerAdapter {
         Filter filter = new JwtAuthenticationFilter(
                 authenticationManager(),
                 jwtUtil());
+        log.info("test");
         http
                 .cors().disable()
                 .csrf().disable()
