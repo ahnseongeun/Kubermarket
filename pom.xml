@@ -129,9 +129,9 @@
 <!--        </plugins>-->
 <!--    </build>-->
     <modules>
-        <module>common-api</module>
         <module>admin-api</module>
         <module>customer-api</module>
         <module>login-api</module>
+        <module>common-api</module>
     </modules>
 </project>

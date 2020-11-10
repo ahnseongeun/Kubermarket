@@ -17,12 +17,12 @@ services:
     ports:
       - 6379:6379
 
-  springboot:
+  admin-api:
     depends_on:
       - docker-mysql
       - docker-redis
     build:
-      context: .
+      context: ./admin-api
       dockerfile: Dockerfile
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/kubermarket?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true
@@ -37,6 +37,45 @@ services:
       - 8080:8080
     restart: always
 
+  customer-api:
+    depends_on:
+      - docker-mysql
+      - docker-redis
+    build:
+      context: ./customer-api
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/kubermarket?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      #SPRING_REDIS_URL: redis://docker-redis:6379
+      SPRING_REDIS_HOST: docker-redis
+      #REDIS_ADDRESS: docker-redis
+      #MYSQL_ADDRESS: docker-mysql
+      #MYSQL_PORT: 3306
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: 123321
+    ports:
+      - 8090:8080
+    restart: always
+
+  login-api:
+    depends_on:
+      - docker-mysql
+      - docker-redis
+    build:
+      context: ./login-api
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/kubermarket?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      #SPRING_REDIS_URL: redis://docker-redis:6379
+      SPRING_REDIS_HOST: docker-redis
+      #REDIS_ADDRESS: docker-redis
+      #MYSQL_ADDRESS: docker-mysql
+      #MYSQL_PORT: 3306
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: 123321
+    ports:
+      - 9000:8080
+    restart: always
 
 
 #networks:
