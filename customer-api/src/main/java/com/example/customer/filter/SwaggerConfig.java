@@ -32,7 +32,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .globalOperationParameters(parameterList)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.customer"))
                 .paths(PathSelectors.any())
                 .build();
     }

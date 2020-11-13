@@ -34,7 +34,7 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: 123321
     ports:
-      - 8080:8080
+      - 8070:8080
     restart: always
 
   customer-api:
@@ -54,7 +54,7 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: 123321
     ports:
-      - 8090:8080
+      - 8080:8080
     restart: always
 
   login-api:
@@ -74,7 +74,7 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: 123321
     ports:
-      - 9000:8080
+      - 8090:8080
     restart: always
 
 
