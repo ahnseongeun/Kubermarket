@@ -15,7 +15,27 @@ Gitlab을 활용한 테스트, 빌드, 배포를 자동화 기능을 이용해�
 * 상품등록 및 조회, 검색기능
 * 유저간의 채팅기능
 
-    
+ 프로젝트 아키텍쳐
+ 
+ 프로젝트 ERD
+ 
+ 프로젝트에 사용된 기술 스택
+ Kubernetes
+ Gitlab CI/CD
+ Docker
+ Spring boot
+ Node.js
+ nginx
+ Mysql
+ 
+ 내가 프로젝트에서 기여한 부분
+ * Spring boot를 이용한 User, Product Backend
+ * GITLAB CI/CD , Gitlab private Registry 
+ 
+ 
+ 
+ 
+ 
 
 
 
