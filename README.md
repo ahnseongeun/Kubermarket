@@ -17,8 +17,9 @@ Gitlab을 활용한 테스트, 빌드, 배포를 자동화 기능을 이용해�
 * 상품등록 및 조회, 검색기능
 * 유저간의 채팅기능(미통합)
 
- 프로젝트 아키텍쳐
- 
+ 프로젝트 
+ ![전체적인 아키텍처](https://user-images.githubusercontent.com/47744119/100739888-25ed4480-341b-11eb-9ea6-efd7c231dba1.png)
+
  프로젝트 ERD
  ![중고거래 어플리케이션 ERD](https://user-images.githubusercontent.com/47744119/100739806-05bd8580-341b-11eb-81f6-48f3dbf23286.png)
  프로젝트에 사용된 기술 스택
