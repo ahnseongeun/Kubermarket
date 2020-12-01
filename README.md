@@ -9,6 +9,7 @@
 Gitlab을 활용한 테스트, 빌드, 배포를 자동화 기능을 이용해서 인프라, 배포, 운영, 모니터링 환경을 구성할 수 있는 마이크로 단위의 중고거래웹을 개발하려고 합니다.
 
 프로젝트 개발 기간
+2020.6 ~ 2020.10
 
 프로젝트 주요기능
 * 마이크로 서비스간의 통신을 통한 느슨한 결합도 및 쿠버네티스 클러스터(미통합)
@@ -34,8 +35,12 @@ Gitlab을 활용한 테스트, 빌드, 배포를 자동화 기능을 이용해�
  * Mysql
  
  내가 프로젝트에서 기여한 부분
- * Spring boot를 이용한 User, Product Backend
- * GITLAB CI/CD , Gitlab private Registry 
+ * Spring boot를 이용한 User, Product Backend 개발
+ * Gitlab CI/CD 
+ * Gitlab private Registry 구축하기 위한 SSL을 적용한 HTTPS 통신
+ * nginx을 이용한 redirec_http_to_https 적용 
+ * Dockerfile 및 docker-compose.yaml, gitlab-ci.yml를 이용한 배포
+
  
  
  
