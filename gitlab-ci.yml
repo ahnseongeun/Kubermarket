@@ -1,0 +1,45 @@
+docker-build:
+  # Official docker image.
+  tags:
+    - docker
+  stage: build
+  image: maven:3-jdk-11-slim
+  script:
+    - "mvn clean package -B"
+    - ls
+    - pwd
+  artifacts:
+    paths:
+      - /builds/ahn/spring
+
+docker-deploy:
+  tags:
+    - docker
+  image: docker:19.03.6
+  stage: deploy
+  before_script:
+    - docker info
+    - apk update
+    - apk upgrade
+    - apk add curl jq python3 python3-dev build-base libffi-dev libressl-dev gettext
+    - curl -O https://bootstrap.pypa.io/get-pip.py
+    - python3 get-pip.py
+    - pip install docker-compose
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD  ec2-15-165-46-135.ap-northeast-2.compute.amazonaws.com:5050
+  script:
+    - pwd
+    - ls
+    - docker-compose up -d --build
+    - cd admin-api
+    - pwd
+    - docker push ec2-15-165-46-135.ap-northeast-2.compute.amazonaws.com:5050/ahn/spring/admin:latest
+    - ls
+    - cd ..
+    - cd customer-api
+    - pwd
+    - docker push ec2-15-165-46-135.ap-northeast-2.compute.amazonaws.com:5050/ahn/spring/customer:latest
+    - cd ..
+    - cd login-api
+    - docker push ec2-15-165-46-135.ap-northeast-2.compute.amazonaws.com:5050/ahn/spring/login:latest
+    - pwd
+    - cd ..
