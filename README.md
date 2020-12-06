@@ -43,13 +43,13 @@ Gitlab을 활용한 테스트, 빌드, 배포를 자동화 기능을 이용해�
  
  Swagger 적용
  
- Admin - 백도어 기능으로 필요한 데이터를 조작
+ * Admin - 백도어 기능으로 필요한 데이터를 조작
  ![숨겨진 admin 기능 백도어](https://user-images.githubusercontent.com/47744119/101281795-9ed20f00-3814-11eb-83eb-08e4b26197b7.PNG)
  
- Customer - 실제로 사용할 사용자
+ * Customer - 실제로 사용할 사용자
  ![customer](https://user-images.githubusercontent.com/47744119/101281786-8f52c600-3814-11eb-9c8a-d9a6f5377aad.PNG)
  
- login - Token을 이용한 로그인 기능
+ * login - Token을 이용한 로그인 기능
  ![로그인](https://user-images.githubusercontent.com/47744119/101281794-9c6fb500-3814-11eb-9280-771a1b368adc.PNG)
 
  
