@@ -19,14 +19,19 @@ import java.time.Duration;
 @EnableCaching
 public class CacheConfig extends JCacheConfigurerSupport {
 
-    @Autowired
-    RedisConnectionFactory redisConnectionFactory;
+    private RedisConnectionFactory redisConnectionFactory;
+    private ObjectMapper objectMapper;
+    private RedisConnectionFactory connectionFactory;
 
     @Autowired
-    ObjectMapper objectMapper;
-
-    @Autowired
-    RedisConnectionFactory connectionFactory;
+    public CacheConfig(RedisConnectionFactory redisConnectionFactory,
+                       ObjectMapper objectMapper,
+                       RedisConnectionFactory connectionFactory
+    ){
+        this.connectionFactory=connectionFactory;
+        this.objectMapper=objectMapper;
+        this.redisConnectionFactory=redisConnectionFactory;
+    }
 
 
     @Bean

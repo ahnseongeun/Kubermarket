@@ -1,4 +1,4 @@
-package com.example.customer.filter;
+package com.example.customer.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

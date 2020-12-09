@@ -1,4 +1,4 @@
-package com.example.customer;
+package com.example.customer.config;
 
 import com.example.customer.filter.JwtAuthenticationFilter;
 import com.example.customer.filter.JwtUtil;
