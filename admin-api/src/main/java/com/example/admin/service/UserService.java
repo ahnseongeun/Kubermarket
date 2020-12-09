@@ -9,13 +9,25 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
+@Service //자동으로 UserService 빈생성
 @Slf4j
-@RequiredArgsConstructor
+@RequiredArgsConstructor //final , @Notnull이 붙은 생성자를 자동으로 생정해준다.
 @Transactional
 public class UserService {
 
     private final UserRepository userRepository;
+
+    /**
+     * @RequiredArgsConstructor //final , @Notnull이 붙은 생성자를 자동으로 생정해준다.
+     *
+     * @RequiredArgsConstructor 이용하지 않았을 때.
+     * private UserRepository userRepository;
+     *
+     * @Autowired
+     * public UserService(UserRepository userRepository){
+     *     this.userRepository=userRepository;
+     * }
+     */
 
     public List<User> getUsers() {
         List<User> userList= (List<User>) userRepository.findAll();

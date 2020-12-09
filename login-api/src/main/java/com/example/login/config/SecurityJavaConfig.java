@@ -1,5 +1,8 @@
-package com.example.login.filter;
+package com.example.login.config;
 
+import com.example.login.filter.JwtAuthenticationFilter;
+import com.example.login.filter.JwtUtil;
+import lombok.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -9,13 +12,14 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.crypto.SecretKey;
 import javax.servlet.Filter;
 
 
 @Configuration
 @EnableWebSecurity
 public class SecurityJavaConfig extends WebSecurityConfigurerAdapter {
-
+    
     private String secret = "12345678901234567890123456789012";
 
     protected void configure(HttpSecurity http) throws Exception {

@@ -32,7 +32,7 @@ public class Category {
     @JsonManagedReference("c")
     private List<Product> products = new ArrayList<>();
 
-    public void updateInfomation(String name) {
+    public void updateInformation(String name) {
         this.name=name;
     }
 

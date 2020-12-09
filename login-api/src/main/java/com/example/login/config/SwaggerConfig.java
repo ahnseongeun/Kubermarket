@@ -1,4 +1,4 @@
-package com.example.admin.filter;
+package com.example.login.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +32,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .globalOperationParameters(parameterList)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.admin"))
+                .apis(RequestHandlerSelectors.basePackage("com.example"))
                 .paths(PathSelectors.any())
                 .build();
     }

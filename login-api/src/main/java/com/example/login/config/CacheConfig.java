@@ -1,4 +1,4 @@
-package com.example.admin.filter;
+package com.example.login.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

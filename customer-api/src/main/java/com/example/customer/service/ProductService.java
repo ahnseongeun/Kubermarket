@@ -89,11 +89,12 @@ public class ProductService {
         ValueOperations<String,Object> redisData = redisTemplate.opsForValue();
         String Key= "CategoryProduct::"+category;
         if(redisData.get(Key)==null) { //전체 데이터 담기
-            List<Product> products=productRepository.findByAddress(category);
+            List<Product> products=productRepository.findByCategory(category);
             for(Product product: products){
                 productDtoList.add(this.convertEntityToDto(product));
             }
             redisData.set(Key,productDtoList);
+            //카테고리로 정렬은 상대적으로 자주 바뀌지 않기때문에 60분으로 설정했다.
             redisTemplate.expire(Key,60L, TimeUnit.MINUTES);
         }else{
             log.info("getCategory_cache");

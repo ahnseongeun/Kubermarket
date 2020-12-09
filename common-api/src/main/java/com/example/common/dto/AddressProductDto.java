@@ -9,6 +9,7 @@ import lombok.Getter;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+//사용 안함
 @Getter
 public class AddressProductDto implements Serializable {
     private Long productId;
