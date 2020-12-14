@@ -26,7 +26,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final ProductRepository productRepository;
     private final PasswordEncoder passwordEncoder;
-    private String fileUrl =  System.getProperty("user.home") + "\\files";
+    private final String fileUrl =  System.getProperty("user.home") + "\\files";
 
     public List<User> getUsers() {
         List<User> userList= (List<User>) userRepository.findAll();

@@ -52,15 +52,15 @@ public class User implements Serializable {
     private String profileImageUrl;
 
     @OneToMany(mappedBy = "user", fetch= FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonManagedReference("d")
+    @JsonManagedReference("product_user")
     private List<Product> products = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonManagedReference("e")
+    @JsonManagedReference("user_productReview")
     private List<ProductReview> productReviews = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonManagedReference("u")
+    @JsonManagedReference("user_chatRoom")
     private List<ChatRoom> chatRooms = new ArrayList<>();
 
 

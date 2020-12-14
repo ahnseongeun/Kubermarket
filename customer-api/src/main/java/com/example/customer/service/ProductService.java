@@ -36,7 +36,7 @@ public class ProductService {
     public final ProductImageRepository productImageRepository;
     public final CategoryRepository categoryRepository;
     public final UserRepository userRepository;
-    private String fileUrl =  System.getProperty("user.home") + "\\files";
+    private final String fileUrl =  System.getProperty("user.home") + "\\files";
 
     public List<Product> getProducts() {
         List<Product> products = (List<Product>) productRepository.findAll();
