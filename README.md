@@ -41,6 +41,13 @@ Gitlab을 활용한 테스트, 빌드, 배포를 자동화 기능을 이용해�
  * nginx을 이용한 redirec_http_to_https 적용 
  * Dockerfile 및 docker-compose.yaml, gitlab-ci.yml를 이용한 배포
  
+ 프로젝트 도중에 어려웠던 부분
+ * 도중에 MSA 애플리케이션을 담당했던 팀원이 나가서 백엔드 부분을 갑작스럽게 개발하게 됐다.
+ * 온라인로만 개발을 진행해서 의사소통을 하는 과정이 쉽지 않았습니다.
+ * JPA에 대한 개념이 확실히 잡히지 않은 상태에서 개발을 하다보니 많은 시행착오가 있었고 JPA의 학습 필요성을 느꼈다.
+ * Docker로 배포는 가능했지만 Kubernetis로 배포하는 과정이 어려웠다.
+ * Gitlab을 https로 적용할때 X509에러가 많이 발생했고 https적용하는 방법을 더 구체적으로 알필요가 있었다.
+ 
  Swagger 적용
  
  * Admin - 백도어 기능으로 필요한 데이터를 조작
